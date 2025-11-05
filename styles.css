@@ -400,3 +400,106 @@ kbd{
     grid-template-columns: 1fr;
   }
 }
+
+/* ===== SLIDE 8 — PIB DEMANDA (ABERTO) ===== */
+.pib-grid{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  margin-top: 16px;
+}
+
+.box{
+  background:#131d2b;
+  border:1px solid #2a3242;
+  border-radius:14px;
+  padding:18px;
+  box-shadow:0 8px 24px rgba(0,0,0,.28);
+}
+.box h3{
+  margin:0 0 10px 0;
+  font-size:24px;
+  color:#9bd1ff;
+}
+
+.formula{
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  background:#0f172a;
+  border:1px solid #223152;
+  border-radius:10px;
+  padding:10px 12px;
+  margin:8px 0;
+  font-size:20px;
+  text-align:center;
+}
+.formula.big{ font-size:26px; }
+.formula.strong{ font-weight:700; }
+
+.marks.tight li{ margin:6px 0; }
+
+@media (max-width: 980px){
+  .pib-grid{ grid-template-columns: 1fr; }
+}
+/* ===== HUD / INDICADOR ===== */
+.slide-hud{
+  position: fixed;
+  right: 16px;
+  top: 16px;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(17, 24, 39, .7);
+  backdrop-filter: blur(6px);
+  border: 1px solid #2a3242;
+  border-radius: 10px;
+  padding: 8px 10px;
+}
+
+#slideIndicator{
+  font-weight: 700;
+  color: #fff;
+  font-size: 16px;
+}
+
+.slide-ctrls{
+  display: flex;
+  gap: 6px;
+}
+
+.slide-ctrls button{
+  appearance: none;
+  border: 1px solid #2a3242;
+  background: #0f172a;
+  color: #e5e7eb;
+  border-radius: 8px;
+  padding: 4px 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.slide-ctrls button:hover{
+  background: #18223a;
+}
+/* ===== SLIDE 9 — EXEMPLO RS ===== */
+.pipeline{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  align-items:center;
+  justify-content:center;
+  margin:12px 0 6px;
+}
+.chip{
+  background:#0f172a;
+  border:1px solid #223152;
+  color:#e5e7eb;
+  padding:6px 10px;
+  border-radius:999px;
+  font-size:16px;
+  white-space:nowrap;
+}
+.arr{
+  color:#9bd1ff;
+  font-weight:700;
+  opacity:.85;
+}
