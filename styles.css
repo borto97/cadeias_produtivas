@@ -525,3 +525,87 @@ kbd{
 .box.highlight{
   border:1px solid #3a4a6a; background: #0f1b31;
 }
+/* ===== SLIDE 11 — GRÁFICO DE BARRAS ===== */
+
+.bar-legend{
+  display:flex;
+  gap:32px;
+  justify-content:center;
+  margin-bottom:20px;
+  font-size:18px;
+}
+
+.bar-legend .box{
+  display:inline-block;
+  width:20px;
+  height:20px;
+  border-radius:4px;
+  margin-right:6px;
+}
+
+.bar-legend .box.agro{ background:#7dd3fc; }
+.bar-legend .box.fam{ background:#7ee787; }
+
+.bar-chart{
+  max-width:960px;
+  margin:0 auto;
+  display:flex;
+  flex-direction:column;
+  gap:24px;
+}
+
+.bar-row{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.bar-label{
+  width:140px;
+  text-align:right;
+  font-size:20px;
+  font-weight:600;
+}
+
+.bar-wrap{
+  flex:1;
+  background:#111827;
+  border:1px solid #374151;
+  border-radius:8px;
+  padding:4px;
+}
+
+.bar{
+  height:40px;
+  width:var(--val);
+  max-width:100%;
+  border-radius:6px;
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  padding-right:10px;
+  font-weight:600;
+  font-size:18px;
+  box-shadow:0 0 10px rgba(0,0,0,.2);
+}
+
+.bar.agro{
+  background:#7dd3fc;
+  color:#0f172a;
+}
+
+.bar.fam{
+  background:#7ee787;
+  color:#0f172a;
+}
+
+.bar-value{
+  white-space:nowrap;
+}
+
+@media(max-width: 900px){
+  .bar-label{
+    width:110px;
+    font-size:18px;
+  }
+}
