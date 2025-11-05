@@ -503,3 +503,25 @@ kbd{
   font-weight:700;
   opacity:.85;
 }
+/* ===== SLIDE 10 — SUBSÍDIOS & POLÍTICAS ===== */
+.subs-grid{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 16px;
+}
+@media (max-width: 980px){
+  .subs-grid{ grid-template-columns: 1fr; }
+}
+/* Mini tabela dentro dos cards */
+.mini-matrix{
+  border:1px solid #2a3242; border-radius:12px; overflow:hidden; margin-top:10px;
+}
+.mini-matrix .row{ display:grid; grid-template-columns: 1.1fr 1.2fr .9fr 1.1fr; }
+.mini-matrix .row.head{ background:#0e1526; font-weight:700; color:#9bd1ff; }
+.mini-matrix .cell{ padding:10px 12px; border-bottom:1px solid #243046; font-size:16.5px; }
+.mini-matrix .row:nth-child(even){ background:#111a2b; }
+
+.box.highlight{
+  border:1px solid #3a4a6a; background: #0f1b31;
+}
