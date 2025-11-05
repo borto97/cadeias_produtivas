@@ -34,6 +34,7 @@
     <li><strong>Qualidade e perfil nutricional</strong>: decisões produtivas e logísticas afetam frescor, perdas e ultraprocessamento.</li>
     <li><strong>Papel do Estado</strong>: compras públicas (PNAE/PAA), crédito rural, regulação sanitária e incentivos moldam a oferta.</li>
     <li><strong>Agronegócio no RS/Brasil</strong>: commodities x hortifrúti local — efeitos sobre renda, empregos e sustentabilidade.</li>
+    <li><strong>Aspectos sociais</strong>: fatores que impactam em perfil nutricional, grupos de riscos, vulnerabilidade social...</li>
   </ul>
     </section>
     <!-- SEÇÃO 3: SISTEMA ALIMENTAR — FLUXO -->
@@ -386,6 +387,184 @@
 
 </section>
 
+<!-- SEÇÃO 8: PIB PELA ÓPTICA DA DEMANDA (ECONOMIA ABERTA) -->
+<section id="sec-pib" class="section" tabindex="0" aria-labelledby="pib-title">
+  <h2 id="pib-title">PIB pela Óptica da Demanda</h2>
+  <p class="lead">Economia aberta com impostos: identidade, balança comercial, multiplicador e interpretações.</p>
+
+  <!-- IDENTIDADE BÁSICA -->
+  <div class="pib-grid">
+    <div class="box">
+      <h3>Identidade (demanda agregada)</h3>
+      <p class="formula">Y = C + I + G + (X − M)</p>
+      <ul class="marks tight">
+        <li><strong>Y</strong>: produto/renda</li>
+        <li><strong>C</strong>: consumo das famílias</li>
+        <li><strong>I</strong>: investimento</li>
+        <li><strong>G</strong>: gasto do governo</li>
+        <li><strong>X − M</strong>: exportações líquidas (balança comercial)</li>
+      </ul>
+    </div>
+
+    <div class="box">
+      <h3>Impostos & Importações endógenos</h3>
+      <p class="formula">T = t·Y &nbsp;&nbsp;&nbsp; M = M<sub>0</sub> + m·Y</p>
+      <ul class="marks tight">
+        <li><strong>t</strong>: alíquota tributária (imposto proporcional)</li>
+        <li><strong>m</strong>: propensão marginal a importar</li>
+        <li>Quanto maior <strong>t</strong> ou <strong>m</strong>, menor o gasto multiplicado</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- MULTIPLICADOR (ABERTO COM TRIBUTOS) -->
+  <div class="box">
+    <h3>Multiplicador (aberto com impostos)</h3>
+    <p class="formula big">k = 1 / [ 1 − c·(1 − t) + m ]</p>
+    <ul class="marks tight">
+      <li><strong>c</strong>: propensão marginal a consumir</li>
+      <li><strong>ΔY = k · ΔA</strong> para choques autônomos (ΔG, ΔI, ΔX etc.)</li>
+      <li><strong>Intuição:</strong> impostos e importações “vazam” a renda e reduzem o efeito em cadeia</li>
+    </ul>
+  </div>
+
+  <!-- MINI-EXEMPLO NUMÉRICO (SLIDE-READY) -->
+  <div class="pib-grid">
+    <div class="box">
+      <h3>Exemplo (parâmetros)</h3>
+      <p class="formula">c = 0,75 &nbsp;&nbsp; t = 0,20 &nbsp;&nbsp; m = 0,15</p>
+      <p class="formula">denominador = 1 − 0,75·(1 − 0,20) + 0,15 = 1 − 0,60 + 0,15 = 0,55</p>
+      <p class="formula strong">k ≈ 1 / 0,55 = 1,818</p>
+    </div>
+    <div class="box">
+      <h3>Interpretação</h3>
+      <ul class="marks">
+        <li>Um aumento autônomo de <strong>ΔG = 100</strong> eleva <strong>ΔY ≈ 182</strong></li>
+        <li>Se <strong>m</strong> subir (mais importações), <strong>k</strong> cai</li>
+        <li>Se <strong>t</strong> subir (mais impostos), <strong>k</strong> cai</li>
+        <li>Se <strong>c</strong> subir (consumo mais alto), <strong>k</strong> aumenta</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="note-box">
+    Em economias exportadoras de commodities, <strong>ΔX</strong> pode ser relevante para o PIB; porém, parte da renda pode “vazar” via <strong>M</strong> (insumos importados) e remessas, reduzindo o impacto local.
+  </div>
+</section>
+
+<!-- SEÇÃO 9: EXEMPLO RS — AGRICULTURA FAMILIAR × AGRONEGÓCIO -->
+<section id="sec-exemplo-rs" class="section" tabindex="0" aria-labelledby="rs-title">
+  <h2 id="rs-title">Exemplo RS — Agricultura Familiar × Agronegócio</h2>
+  <p class="lead">Contrastes no território gaúcho: encadeamentos, destino da renda e papel das políticas públicas.</p>
+
+  <div class="compare">
+    <!-- AGRICULTURA FAMILIAR NO RS -->
+    <article class="unit fam">
+      <header>
+        <h3>👩‍🌾 Agricultura Familiar no RS</h3>
+        <span class="pill">mercado local</span>
+        <span class="pill">diversificação</span>
+      </header>
+
+      <ul class="points">
+        <li>Forte em <strong>leite</strong>, <strong>hortifruti</strong>, ovos, mel, panificados e agroindústria familiar.</li>
+        <li><strong>Compras institucionais</strong>: PNAE (≥30% da AF por lei) e PAA sustentam a demanda local.</li>
+        <li>Renda circula no município: insumos, serviços e consumo local.</li>
+        <li>Reduz êxodo rural e reforça segurança alimentar.</li>
+      </ul>
+
+      <div class="note-box strong-note">
+        🟢 <strong>PNAE exige ≥30% de compras da agricultura familiar<br>(Lei 11.947/2009).</strong><br>
+        Isso ancora a demanda local e amplia o multiplicador <strong>no território</strong>.
+      </div>
+
+      <div class="pipeline">
+        <span class="chip">Produção familiar</span><span class="arr">→</span>
+        <span class="chip">Cooperativa/Feira</span><span class="arr">→</span>
+        <span class="chip">PNAE/PAA</span><span class="arr">→</span>
+        <span class="chip">Consumidor local</span>
+      </div>
+
+      <div class="num" aria-label="destaques AF">
+        <div><strong>Ênfase:</strong> desenvolvimento territorial</div>
+        <div><strong>Multiplicador local:</strong> alto</div>
+      </div>
+    </article>
+
+    <div class="vs" aria-hidden="true">vs</div>
+
+    <!-- AGRONEGÓCIO NO RS -->
+    <article class="unit agro">
+      <header>
+        <h3>🏭 Agronegócio no RS</h3>
+        <span class="pill">escala</span>
+        <span class="pill">exportação</span>
+      </header>
+
+      <ul class="points">
+        <li>Cadeias longas de <strong>soja</strong>, <strong>milho</strong>, <strong>carnes</strong> e <strong>arroz</strong>.</li>
+        <li>Alto uso de tecnologia, mecanização e integração a mercados externos.</li>
+        <li>Impacto macro (PIB/BC): entrada de divisas; porém parte da renda “vaza”.</li>
+        <li>Dependência logística: armazenagem, rodovias e portos.</li>
+      </ul>
+
+      <div class="note-box strong-note">
+        🔵 <strong>Cadeias longas e integração externa elevam PIB e balança comercial.</strong><br>
+        Mas parte do valor sai do território via insumos, serviços e logística fora do município.
+      </div>
+
+      <div class="pipeline">
+        <span class="chip">Insumos</span><span class="arr">→</span>
+        <span class="chip">Plantio</span><span class="arr">→</span>
+        <span class="chip">Armazenagem</span><span class="arr">→</span>
+        <span class="chip">Esmagamento</span><span class="arr">→</span>
+        <span class="chip">Farelo/Ração</span><span class="arr">→</span>
+        <span class="chip">Aves/Suínos</span><span class="arr">→</span>
+        <span class="chip">Frigorífico</span><span class="arr">→</span>
+        <span class="chip">Exportação</span>
+      </div>
+
+      <div class="num" aria-label="destaques agro">
+        <div><strong>Ênfase:</strong> balança comercial/PIB</div>
+        <div><strong>Encadeamentos:</strong> longos</div>
+      </div>
+    </article>
+  </div>
+
+  <!-- Indicadores para acompanhar (provocação em aula) -->
+  <div class="matrix" role="table" aria-label="Indicadores RS">
+    <div class="row head" role="row">
+      <div class="cell">Indicador</div>
+      <div class="cell">Agric. Familiar (RS)</div>
+      <div class="cell">Agronegócio (RS)</div>
+    </div>
+
+    <div class="row" role="row">
+      <div class="cell">Destino da renda</div>
+      <div class="cell">Local/regional</div>
+      <div class="cell">Nacional/externo</div>
+    </div>
+
+    <div class="row" role="row">
+      <div class="cell">Canais</div>
+      <div class="cell">Feiras, cooperativas, PNAE/PAA</div>
+      <div class="cell">Indústria, tradings, exportação</div>
+    </div>
+
+    <div class="row" role="row">
+      <div class="cell">Risco</div>
+      <div class="cell">Acesso a canais, clima</div>
+      <div class="cell">Preço internacional, câmbio, logística</div>
+    </div>
+
+    <div class="row" role="row">
+      <div class="cell">Política focal</div>
+      <div class="cell">Compras públicas, PRONAF, ATER</div>
+      <div class="cell">Crédito, seguro, infraestrutura</div>
+    </div>
+  </div>
+</section>
+
 
 
   </main>
@@ -395,6 +574,15 @@
   Use ← → para navegar • Ou pressione números para ir direto ao slide
     </small>
   </footer>
+
+  <!-- HUD fixa: indicador + botões -->
+<div class="slide-hud" aria-live="polite">
+  <span id="slideIndicator">1/1</span>
+  <div class="slide-ctrls" aria-hidden="true">
+    <button id="btnPrev" title="Anterior (←)">◀</button>
+    <button id="btnNext" title="Próximo (→)">▶</button>
+  </div>
+</div>
 
   <script src="app.js"></script>
 </body>
