@@ -1091,6 +1091,478 @@
   </div>
     </section>
 
+<!-- SEÇÃO 16: FLUXO REAL x MONETÁRIO -->
+<section id="sec-fluxos" class="section flow16" tabindex="0" aria-labelledby="flow16-title">
+  <h2 id="flow16-title">Fluxo Real × Fluxo Monetário</h2>
+  <p class="lead">Interação entre <strong>Famílias</strong>, <strong>Empresas</strong>, <strong>Governo</strong> e <strong>Setor Externo</strong>.</p>
+
+  <!-- LEGENDA -->
+  <div class="flow16-legend" role="list">
+    <span class="pill real" role="listitem">Fluxo <strong>Real</strong> (bens/serviços & fatores)</span>
+    <span class="pill money" role="listitem">Fluxo <strong>Monetário</strong> (pagamentos & renda)</span>
+  </div>
+
+  <!-- DIAGRAMA -->
+  <div class="flow16-wrap">
+    <!-- agentes -->
+    <article class="agent fam" aria-label="Famílias">
+      <h3>Famílias</h3>
+      <ul class="points">
+        <li>Consumo (C)</li>
+        <li>Oferta de trabalho</li>
+        <li>Recebem salários/renda</li>
+      </ul>
+    </article>
+
+    <article class="agent gov" aria-label="Governo">
+      <h3>Governo</h3>
+      <ul class="points">
+        <li>Impostos (T)</li>
+        <li>Gastos (G)</li>
+        <li>Regulação</li>
+      </ul>
+    </article>
+
+    <article class="agent firm" aria-label="Empresas">
+      <h3>Empresas</h3>
+      <ul class="points">
+        <li>Produção de bens/serviços</li>
+        <li>Demanda por fatores</li>
+        <li>Pagam salários/lucros</li>
+      </ul>
+    </article>
+
+    <article class="agent ext" aria-label="Setor Externo">
+      <h3>Setor Externo</h3>
+      <ul class="points">
+        <li>Exportações (X)</li>
+        <li>Importações (M)</li>
+        <li>Entrada/Saída de moeda</li>
+      </ul>
+    </article>
+
+    <!-- ARROWS SVG (em cima do grid) -->
+    <svg class="flow16-arrows" viewBox="0 0 1000 620" preserveAspectRatio="none" aria-hidden="true">
+      <!-- Marcadores -->
+      <defs>
+        <marker id="arrowReal" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+          <path d="M0,0 L10,5 L0,10 Z" class="real" />
+        </marker>
+        <marker id="arrowMoney" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+          <path d="M0,0 L10,5 L0,10 Z" class="money" />
+        </marker>
+      </defs>
+
+      <!-- Famílias → Empresas (REAL: fatores/bens) -->
+      <line class="real" x1="180" y1="320" x2="820" y2="320" marker-end="url(#arrowReal)" />
+      <!-- Empresas → Famílias (MONETÁRIO: salários, receitas) -->
+      <line class="money" x1="820" y1="360" x2="180" y2="360" marker-end="url(#arrowMoney)" />
+
+      <!-- Governo ↔ Famílias -->
+      <!-- T: Famílias → Governo (money) -->
+      <line class="money" x1="250" y1="160" x2="500" y2="120" marker-end="url(#arrowMoney)" />
+      <!-- G: Governo → Famílias (money) -->
+      <line class="money" x1="500" y1="140" x2="250" y2="200" marker-end="url(#arrowMoney)" />
+
+      <!-- Governo ↔ Empresas -->
+      <!-- T: Empresas → Governo (money) -->
+      <line class="money" x1="750" y1="160" x2="500" y2="120" marker-end="url(#arrowMoney)" />
+      <!-- G: Governo → Empresas (money) -->
+      <line class="money" x1="500" y1="140" x2="750" y2="200" marker-end="url(#arrowMoney)" />
+
+      <!-- Setor Externo ↔ Empresas -->
+      <!-- X (REAL): Empresas → Externo -->
+      <line class="real" x1="820" y1="430" x2="500" y2="560" marker-end="url(#arrowReal)" />
+      <!-- $ de X (MONETÁRIO): Externo → Empresas -->
+      <line class="money" x1="500" y1="540" x2="820" y2="400" marker-end="url(#arrowMoney)" />
+
+      <!-- M (REAL): Externo → Empresas -->
+      <line class="real" x1="180" y1="430" x2="500" y2="560" marker-end="url(#arrowReal)" />
+      <!-- $ de M (MONETÁRIO): Empresas → Externo -->
+      <line class="money" x1="500" y1="540" x2="180" y2="400" marker-end="url(#arrowMoney)" />
+
+      <!-- Rótulos curtos (opcionais) -->
+      <text class="lbl" x="500" y="306">fatores/bens (real)</text>
+      <text class="lbl" x="500" y="380">salários/receitas (monetário)</text>
+      <text class="lbl" x="392" y="112">T</text>
+      <text class="lbl" x="392" y="154">G</text>
+      <text class="lbl" x="608" y="112">T</text>
+      <text class="lbl" x="608" y="154">G</text>
+      <text class="lbl" x="650" y="505">X / $↘</text>
+      <text class="lbl" x="350" y="505">↙ M / $</text>
+    </svg>
+  </div>
+
+  <p class="small hint">Fluxo <strong>real</strong> (verde) e <strong>monetário</strong> (azul) ocorrem simultaneamente e em sentidos opostos.</p>
+</section>
+
+<!-- SEÇÃO 17: EXTERNALIDADES & FALHAS DE MERCADO -->
+<section id="sec-externalidades" class="section ext17" tabindex="0" aria-labelledby="ext17-title">
+  <h2 id="ext17-title">Externalidades & Falhas de Mercado</h2>
+  <p class="lead">Quando as decisões privadas não refletem todos os custos/benefícios sociais, o resultado deixa de ser eficiente.</p>
+
+  <!-- LEGENDA -->
+  <div class="ext17-legend">
+    <span class="pill pos">Externalidade positiva</span>
+    <span class="pill neg">Externalidade negativa</span>
+    <span class="pill fail">Falha de mercado</span>
+  </div>
+
+  <!-- GRID 2 COLUNAS -->
+  <div class="ext17-grid">
+    <!-- Externalidades -->
+    <article class="panel" aria-labelledby="ext17-ext">
+      <header class="panel-h">
+        <span class="bubble">🔄</span>
+        <h3 id="ext17-ext">Externalidades</h3>
+      </header>
+      <p class="desc">
+        <strong>Impactos sobre terceiros</strong> que não entram no preço de mercado.
+        Se for <em>benefício</em> → <strong>positiva</strong>; se for <em>custo</em> → <strong>negativa</strong>.
+      </p>
+
+      <div class="split">
+        <div class="card light pos">
+          <h4>Positiva</h4>
+          <ul class="marks">
+            <li><strong>Vacinação</strong> reduz contágio (benefício social &gt; privado).</li>
+            <li><strong>Educação</strong> aumenta produtividade, cidadania e inovação.</li>
+          </ul>
+          <p class="hint">Mercado tende a <u>produzir de menos</u> sem incentivo.</p>
+        </div>
+
+        <div class="card light neg">
+          <h4>Negativa</h4>
+          <ul class="marks">
+            <li><strong>Poluição</strong> afeta saúde e meio ambiente.</li>
+            <li><strong>Congestionamentos</strong> elevam custo de todos.</li>
+          </ul>
+          <p class="hint">Mercado tende a <u>produzir demais</u> sem controle.</p>
+        </div>
+      </div>
+
+      <!-- Mini-esquemas -->
+      <div class="mini-charts">
+        <!-- Negativa: produção excessiva -->
+        <div class="mini one">
+          <div class="mini-title">Negativa: produção excessiva</div>
+          <div class="bar-wrap">
+            <span class="bar priv" style="--w: 78%"><i>Q<sub>priv</sub></i></span>
+            <span class="bar soc"  style="--w: 54%"><i>Q<sub>social</sub></i></span>
+          </div>
+          <div class="legend">
+            <span class="dot neg"></span> ótimo social &lt; privado
+          </div>
+        </div>
+
+        <!-- Positiva: produção insuficiente -->
+        <div class="mini two">
+          <div class="mini-title">Positiva: produção insuficiente</div>
+          <div class="bar-wrap">
+            <span class="bar priv" style="--w: 40%"><i>Q<sub>priv</sub></i></span>
+            <span class="bar soc  pos" style="--w: 65%"><i>Q<sub>social</sub></i></span>
+          </div>
+          <div class="legend">
+            <span class="dot pos"></span> ótimo social &gt; privado
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Falhas de mercado -->
+    <article class="panel" aria-labelledby="ext17-fail">
+      <header class="panel-h">
+        <span class="bubble">🧩</span>
+        <h3 id="ext17-fail">Falhas de Mercado</h3>
+      </header>
+
+      <div class="fail-grid">
+        <div class="fail-item">
+          <h4 class="tag fail">Bens públicos</h4>
+          <p class="text">Não-rivais e não-excludentes (ex.: iluminação pública). Mercado oferta <strong>menos</strong> que o desejável.</p>
+        </div>
+
+        <div class="fail-item">
+          <h4 class="tag fail">Assimetria de informação</h4>
+          <ul class="marks tight">
+            <li><strong>Seleção adversa</strong>: “limões” em carros usados.</li>
+            <li><strong>Risco moral</strong>: segurado muda comportamento.</li>
+          </ul>
+        </div>
+
+        <div class="fail-item">
+          <h4 class="tag fail">Poder de mercado</h4>
+          <p class="text">Monopólios/oligopólios elevam preço e reduzem quantidade.</p>
+        </div>
+
+        <div class="fail-item">
+          <h4 class="tag fail">Externalidades</h4>
+          <p class="text">Custos/benefícios externos não internalizados (como acima).</p>
+        </div>
+
+        <div class="fail-item">
+          <h4 class="tag fail">Falhas de coordenação</h4>
+          <p class="text">Ações isoladas levam a equilíbrios ruins (ex.: trânsito).</p>
+        </div>
+      </div>
+
+      <div class="policy">
+        <h4>Respostas de política</h4>
+        <div class="chips">
+          <span class="chip neg">Impostos pigouvianos (ex.: carbono)</span>
+          <span class="chip pos">Subsídios (ex.: educação)</span>
+          <span class="chip">Regulação ambiental/sanitária</span>
+          <span class="chip">Provisão direta de bens públicos</span>
+          <span class="chip">Selos, informação e transparência</span>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <p class="small hint">
+    Intuição: <strong>externalidades</strong> deslocam o ótimo social em relação ao privado. Políticas buscam alinhar incentivos para maximizar bem-estar.
+  </p>
+</section>
+
+<!-- SEÇÃO 18: TAXA DE JUROS & INFLAÇÃO -->
+<section id="sec-juros" class="section juros18" tabindex="0" aria-labelledby="juros18-title">
+  <h2 id="juros18-title">Taxa de Juros & Inflação</h2>
+  <p class="lead">Como a política monetária usa os juros para ancorar preços no curto prazo.</p>
+
+  <!-- legenda -->
+  <div class="juros18-legend">
+    <span class="pill infl">Inflação (π)</span>
+    <span class="pill rate">Taxa de juros (i)</span>
+    <span class="pill real">Juro real (i − E[π])</span>
+  </div>
+
+  <!-- grid 2 colunas -->
+  <div class="juros18-grid">
+    <!-- conceito -->
+    <article class="panel def">
+      <header class="panel-h">
+        <span class="bubble">📌</span>
+        <h3>Conceitos</h3>
+      </header>
+
+      <div class="split">
+        <div class="card">
+          <h4>Inflação (π)</h4>
+          <ul class="marks">
+            <li>Alta generalizada e persistente de preços → <strong>perda do poder de compra</strong>.</li>
+            <li>Medição típica no Brasil: <strong>IPCA</strong>.</li>
+            <li>Fontes: demanda aquecida, choques de oferta, inércia e expectativas.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h4>Taxa de juros (i)</h4>
+          <ul class="marks">
+            <li><strong>Preço do dinheiro no tempo</strong>: custo do crédito/retorno da poupança.</li>
+            <li><strong>Nominal</strong>: taxa observada; <strong>Real</strong>: i − E[π].</li>
+            <li>Canal da política monetária: crédito, câmbio, investimento e consumo.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="eq-box">
+        <div class="eq">
+          <span class="tag">Real</span>
+          <span>i<sub>real</sub> ≈ i<sub>nom</sub> − E[π]</span>
+        </div>
+        <div class="eq">
+          <span class="tag">Regra</span>
+          <span>π↑ ⇒ BC <strong>sobe</strong> i &nbsp;|&nbsp; π↓/atividade fraca ⇒ BC <strong>corta</strong> i</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- gráfico -->
+    <article class="panel chart">
+      <header class="panel-h">
+        <span class="bubble">📈</span>
+        <h3>Trade-off (Curto Prazo) — Phillips simplificada</h3>
+      </header>
+
+      <div class="chart-wrap">
+        <!-- Eixos + curva em SVG -->
+        <svg class="ph-svg" viewBox="0 0 600 360" aria-labelledby="ph-title" role="img">
+          <title id="ph-title">Trade-off entre taxa de juros (x) e inflação (y) no curto prazo</title>
+
+          <!-- eixos -->
+          <line x1="60" y1="20" x2="60" y2="310" class="axis"/>
+          <line x1="60" y1="310" x2="570" y2="310" class="axis"/>
+          <text x="20" y="22" class="lbl y">Inflação (π)</text>
+          <text x="540" y="338" class="lbl x">Taxa de juros (i)</text>
+
+          <!-- ticks -->
+          <g class="ticks">
+            <line x1="60" y1="90" x2="55" y2="90" class="tick"/><text x="32" y="95" class="tlabel">Alta</text>
+            <line x1="60" y1="200" x2="55" y2="200" class="tick"/><text x="30" y="205" class="tlabel">Média</text>
+            <line x1="150" y1="310" x2="150" y2="315" class="tick"/><text x="142" y="334" class="tlabel">Baixa</text>
+            <line x1="360" y1="310" x2="360" y2="315" class="tick"/><text x="350" y="334" class="tlabel">Média</text>
+            <line x1="520" y1="310" x2="520" y2="315" class="tick"/><text x="510" y="334" class="tlabel">Alta</text>
+          </g>
+
+          <!-- curva (decrescente) -->
+          <path d="M 100 90 Q 250 180 520 270" class="curve"/>
+          
+          <!-- dois pontos de política -->
+          <circle cx="180" cy="120" r="5" class="pt A"/>
+          <text x="190" y="116" class="ptext">A: i baixo → π mais alta</text>
+
+          <circle cx="420" cy="240" r="5" class="pt B"/>
+          <text x="430" y="236" class="ptext">B: i alto → π mais baixa</text>
+        </svg>
+
+        <!-- legenda do gráfico -->
+        <div class="legend">
+          <span class="key infl"></span>π (inflação) 
+          <span class="key rate"></span>i (juros)
+          <span class="key curve"></span>Curva de Phillips (curto prazo)
+        </div>
+
+        <p class="hint">No longo prazo, expectativas se ajustam e a relação pode enfraquecer (curva “vertical”).</p>
+      </div>
+    </article>
+  </div>
+
+  <!-- tabela-resumo -->
+  <div class="juros18-summary">
+    <div class="row head">
+      <div>Movimento do BC</div><div>Crédito/atividade</div><div>Efeito esperado em π</div>
+    </div>
+    <div class="row">
+      <div>i ↑</div><div>Desaquece</div><div>π ↓</div>
+    </div>
+    <div class="row">
+      <div>i ↓</div><div>Estimula</div><div>π ↑</div>
+    </div>
+  </div>
+</section>
+
+<!-- SEÇÃO 19: TENDÊNCIA À CONCENTRAÇÃO DO CAPITAL -->
+<section id="sec-concentracao" class="section conc19" tabindex="0" aria-labelledby="conc19-title">
+  <h2 id="conc19-title">Tendência à Concentração do Capital</h2>
+  <p class="lead">Do circuito mercantil <strong>M–D–M’</strong> ao circuito capitalista <strong>D–M–D’</strong>: a lógica expansiva e suas consequências.</p>
+
+  <!-- legenda -->
+  <div class="conc19-legend">
+    <span class="pill merc">M–D–M’ (mercantil: consumo como fim)</span>
+    <span class="pill cap">D–M–D’ (capitalista: mais-valor como fim)</span>
+  </div>
+
+  <div class="conc19-grid">
+    <!-- DIAGRAMA -->
+    <article class="panel diagram">
+      <header class="panel-h">
+        <span class="bubble">🔁</span>
+        <h3>Circuitos</h3>
+      </header>
+
+      <div class="diagram-wrap">
+        <!-- M–D–M’ -->
+        <div class="ring mercantil">
+          <h4>M – D – M’</h4>
+          <p class="desc">Dinheiro é meio, <strong>mercadoria</strong> é o fim (consumo/uso).</p>
+          <svg class="loop" viewBox="0 0 520 170" aria-hidden="true">
+            <!-- nós -->
+            <g class="nodes">
+              <rect x="20"  y="60" width="120" height="48" rx="10" class="node"/>
+              <rect x="200" y="20" width="120" height="48" rx="10" class="node"/>
+              <rect x="380" y="60" width="120" height="48" rx="10" class="node"/>
+              <text x="80"  y="90" class="nlabel">M</text>
+              <text x="260" y="50" class="nlabel">D</text>
+              <text x="440" y="90" class="nlabel">M’</text>
+            </g>
+            <!-- setas -->
+            <defs>
+              <marker id="arrMerc" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+                <path d="M0,0 L10,5 L0,10 Z" class="merc"/>
+              </marker>
+            </defs>
+            <path d="M 140 84 C 165 70, 185 55, 200 44" class="edge merc" marker-end="url(#arrMerc)"/>
+            <path d="M 320 44 C 350 55, 370 70, 380 84" class="edge merc" marker-end="url(#arrMerc)"/>
+            <text x="260" y="22" class="elabel merc">troca visando uso</text>
+          </svg>
+        </div>
+
+        <!-- D–M–D’ -->
+        <div class="ring capital">
+          <h4>D – M – D’</h4>
+          <p class="desc">Mercadoria é meio, <strong>dinheiro acrescido</strong> é o fim (D’ &gt; D).</p>
+          <svg class="loop" viewBox="0 0 520 170" aria-hidden="true">
+            <g class="nodes">
+              <rect x="20"  y="60" width="120" height="48" rx="10" class="node"/>
+              <rect x="200" y="20" width="120" height="48" rx="10" class="node"/>
+              <rect x="380" y="60" width="120" height="48" rx="10" class="node"/>
+              <text x="80"  y="90" class="nlabel">D</text>
+              <text x="260" y="50" class="nlabel">M</text>
+              <text x="440" y="90" class="nlabel">D’</text>
+            </g>
+            <defs>
+              <marker id="arrCap" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+                <path d="M0,0 L10,5 L0,10 Z" class="cap"/>
+              </marker>
+            </defs>
+            <path d="M 140 84 C 165 70, 185 55, 200 44" class="edge cap" marker-end="url(#arrCap)"/>
+            <path d="M 320 44 C 350 55, 370 70, 380 84" class="edge cap" marker-end="url(#arrCap)"/>
+            <text x="260" y="22" class="elabel cap">produção → mais-valor</text>
+          </svg>
+        </div>
+      </div>
+    </article>
+
+    <!-- ACUMULAÇÃO & CONCENTRAÇÃO -->
+    <article class="panel mech">
+      <header class="panel-h">
+        <span class="bubble">🏗️</span>
+        <h3>Acumulação competitiva → concentração</h3>
+      </header>
+
+      <ul class="marks">
+        <li><strong>Economias de escala</strong> ↓ custo unitário favorece grandes.</li>
+        <li><strong>Inovação & tecnologia</strong> exigem capital — barreiras de entrada.</li>
+        <li><strong>Reinvestimento compulsório</strong>: quem não cresce, sai.</li>
+        <li><strong>Financeirização</strong> acelera centralização e controle.</li>
+      </ul>
+
+      <div class="chips">
+        <span class="chip">Concorrência → expulsão/absorção dos pequenos</span>
+        <span class="chip">Monopólios / Oligopólios emergem</span>
+      </div>
+    </article>
+  </div>
+
+  <!-- CRISES E LIMITES -->
+  <div class="conc19-bottom">
+    <article class="panel crises">
+      <header class="panel-h">
+        <span class="bubble">⚠️</span>
+        <h3>Expansão infinita em mundo finito → crises inerentes</h3>
+      </header>
+      <div class="split">
+        <div class="col">
+          <ul class="marks">
+            <li><strong>Superprodução</strong> e saturação de mercados.</li>
+            <li><strong>Desvalorização/destruição</strong> periódica de capital.</li>
+            <li><strong>Desemprego</strong> e queda salarial.</li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul class="marks">
+            <li><strong>Busca de novos espaços</strong> (territoriais/financeiros).</li>
+            <li><strong>Centralização pós-crise</strong>: grandes compram os quebrados.</li>
+            <li><strong>D–M–D’</strong> exige expansão contínua → tensão com limites materiais.</li>
+          </ul>
+        </div>
+      </div>
+      <p class="hint"><strong>Mensagem-chave:</strong> a lógica <em>D–M–D’</em> tende à concentração e gera crises recorrentes num sistema de recursos limitados.</p>
+    </article>
+  </div>
+</section>
+
+
   </main>
 
   <footer class="container footer">
@@ -1111,4 +1583,3 @@
   <script src="app.js"></script>
 </body>
 </html>
-
